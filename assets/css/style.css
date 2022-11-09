@@ -26,7 +26,7 @@ body {
 }
 
 header {
-  width: 100wh;;
+  width: 100wh;
   background: var(--purpleColor);
 }
 
@@ -34,7 +34,7 @@ p {
   color: var(--whiteColor);
   font-size: 30px;
   font-weight: 400;
-  list-style: 45px;
+  line-height: 45px;
 }
 
 .main-content {
@@ -44,16 +44,39 @@ p {
   background: #8701CF;
 }
 
-.second-content {
-  width: 100vw;
-  max-height: max-content;
-  background: var(--orangeColor);
-}
-
 .text-main, .text-second-content {
   color: var(--whiteColor);
   font-size: 80px; 
   font-weight: 800;
+}
+
+.last-container {
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .text-main, .text-second-content {
+    font-size: 30px; 
+  }
+
+  p {
+    font-size: 25px;
+    line-height: 38px;
+  }
+
+  .last-container {
+    flex-direction: column;
+  }
+
+  .right-content, .left-content {
+    width: 100% !important;
+  }
+}
+
+.second-content {
+  width: 100vw;
+  max-height: max-content;
+  background: var(--orangeColor);
 }
 
 .left-content, .right-content {
@@ -70,5 +93,58 @@ p {
   width: 50%;
   background-color: var(--orangeColor);
 }
+
+.sendForm {
+  background: var(--purpleColor);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  width: 417px;
+  height: 65px;
+  font-size: 20px;
+  color: var(--whiteColor);
+}
+
+.sendForm:disabled {
+  cursor: not-allowed;
+  background: #D0B7DE;
+}
+
+.sendForm:not([disabled]):hover {
+  background: #9C04ED;
+  ;
+}
+
+.form-control {
+  width: 415px;
+  height: 65px;
+}
+
+.form-label, .form-check-label {
+  color: var(--whiteColor);
+}
+
+.increment, .decrement {
+  width: 52px;
+  height: 41px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  background: var(--purpleColor);
+  color: var(--whiteColor);
+}
+
+.qntEmployee {
+  width: 68px;
+  height: 41px;
+  margin-right: 16px;
+  margin-left: 16px;
+  outline: none;
+  border: none;
+  background: var(--whiteColor);
+  border-radius: 4px;
+}
+
+
 
 
